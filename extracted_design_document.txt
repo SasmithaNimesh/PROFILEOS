@@ -1,0 +1,519 @@
+=== PAGE 1 ===
+PROFILEOS — UI/UX Design Document
+Your career. Your identity. Your future.
+Prepared for: Nimesh · Scope: public website, authenticated workspace, design system,
+key flows
+1. Overview
+PROFILEOS is an AI-powered professional identity platform. Users bring in what they
+already have (profile links, documents, manual entries), build one verified source of truth,
+and turn it into career assets: a published portfolio, CVs, and cover letters.
+This document defines the UI/UX approach for the redesign. Its central decision is a strict
+separation of two experiences:
+The workspace is never a crowded dashboard. Each major feature gets its own dedicated
+page and workspace.
+2. Design Principles
+1. One screen, one job. Every page answers a single question: where am I, and what do I
+do next?
+2. Navigation hub, not feature dump. The Overview shows four actions and a progress
+indicator, nothing more.
+3. Truth over polish. AI never invents qualifications, dates, employers or metrics. Missing
+data is requested or omitted.
+4. Everything is editable. Generated content is always real, structured, editable content,
+never a flattened image.
+5. Show, then confirm. Imported data is presented for review before it joins the profile.
+6. Real or absent. No dead buttons, fake analytics or placeholder pages. If an integration
+lacks credentials, show a clear setup or unavailable state.
+Public website
+Authenticated workspace
+Purpose
+Persuade and explain
+Complete tasks
+Mood
+Cinematic, expressive
+Calm, focused, productive
+Density
+Spacious, one idea per section
+Clean, one job per page
+Visual effects
+Glows, gradients, motion
+Minimal, functional
+PROFILEOS — UI/UX Design Document
+Page 1 of 12
+
+
+=== PAGE 2 ===
+7. Restraint. Motion and glow serve hierarchy. Where in doubt, remove it.
+3. Audience
+PROFILEOS serves students, graduates, developers, designers, business professionals,
+freelancers, entrepreneurs, researchers and academics.
+The onboarding category selection adapts defaults (suggested sections, template order)
+to each segment.
+4. Information Architecture
+Public
+├── Home (Hero → Integrations → How it works → Identity Engine → Studios → 
+Templates → Trust → FAQ → CTA → Footer)
+├── Sign In · Create Account · Forgot Password · Email Verification
+Onboarding (optional, skippable)
+Workspace
+├── Overview
+├── My Profile
+├── Portfolio Studio
+├── CV Studio
+├── Cover Letter Studio
+├── My Documents
+└── Settings
+Segment
+Primary need
+UX implication
+Student / graduate
+First CV, little
+experience
+Emphasise education, projects, skills;
+guide missing info
+Developer
+Show work fast
+GitHub import, project-first portfolio
+Designer / creative
+Visual presence
+Creative template, strong imagery control
+Professional /
+freelancer
+Targeted applications
+Job-description tailoring, ATS CV
+Researcher /
+academic
+Credibility
+Publications, academic CV template
+PROFILEOS — UI/UX Design Document
+Page 2 of 12
+
+
+=== PAGE 3 ===
+The sidebar contains exactly the seven workspace items. Notifications and the profile
+menu live in the top bar. Nothing else is promoted to primary navigation.
+5. Core Story and Mental Model
+The product narrative, used on the homepage and mirrored in the app:
+CONNECT → BUILD YOUR IDENTITY → CREATE → PUBLISH
+6. Design System
+6.1 Colour
+Proposed tokens. Dark is the brand default; the workspace also supports a light theme.
+Stage
+Homepage message
+Where it happens in the app
+Connect
+Bring your professional world
+together
+Onboarding, My Profile
+Build
+identity
+One verified source of truth
+My Profile
+Create
+Portfolio, CV, cover letter
+The three Studios
+Publish
+Share and download
+Portfolio publish, exports, My
+Documents
+Token
+Value
+Use
+--bg-obsidian
+#07080C
+Public site background
+--bg-charcoal
+#11131A
+Surfaces, cards
+--bg-raised
+#181B25
+Elevated panels, menus
+--border
+#262A36
+Dividers, outlines
+--text-primary
+#F2F4F8
+Headings, body
+--text-muted
+#8A91A3
+Secondary text
+--accent-blue
+#3B82F6
+Primary actions, links, focus
+--accent-violet
+#7C5CFF
+Gradient partner, highlights
+--success
+#22C55E
+Saved, verified
+PROFILEOS — UI/UX Design Document
+Page 3 of 12
+
+
+=== PAGE 4 ===
+Rules: blue is the single primary action colour. Violet appears only in subtle gradients and
+highlights. Gradients are never used on body text or large surfaces in the workspace.
+6.2 Typography
+Display: Space Grotesk, for hero and section headings.
+Body and UI: Inter or Geist.
+Scale: 12 / 14 / 16 / 18 / 24 / 32 / 48 / 64 px, with a clear step between heading levels.
+Line height: 1.6 body, 1.1–1.2 display.
+Weights: 400, 500, 600 for UI; 500–700 for display.
+6.3 Spacing, shape, elevation
+4 px base grid; common steps 8, 12, 16, 24, 32, 48, 80, 120.
+Radius: 8 px controls, 12 px cards, 20 px large surfaces.
+Elevation is expressed with borders and slight tonal shifts first, shadows second. Glow
+is reserved for hero visuals and primary CTAs on the public site.
+6.4 Core components
+Buttons (primary, secondary, ghost, destructive), inputs with inline validation, selects, tag
+inputs for skills, section cards with View/Add/Edit/Delete, modals and drawers, tabs,
+toasts, skeleton loaders, empty states, stepper, split-pane layout, template picker card,
+document card, version-history list, confirmation dialog.
+Every component defines default, hover, focus, active, disabled, loading and error states.
+7. Public Website
+7.1 Navigation
+Logo · Features · How it works · Templates · About · Sign In · Create Your Identity (primary
+button). Sticky and transparent at the top, solid on scroll. On mobile it collapses to a full-
+screen menu with the primary CTA pinned.
+Token
+Value
+Use
+--warning
+#F59E0B
+Needs attention
+--danger
+#EF4444
+Destructive actions, errors
+PROFILEOS — UI/UX Design Document
+Page 4 of 12
+
+
+=== PAGE 5 ===
+7.2 Hero
+Headline: "Everything you've built. One powerful professional identity."
+Supporting text: "Connect your professional world. Create your portfolio, CV, and
+personal brand — all from one place."
+CTAs: Create Your Identity (primary), Explore Features (secondary).
+Visual: A composed, layered product presentation: a portfolio preview, a CV preview
+and a professional identity card, over abstract gradient and subtle particle graphics. It
+must look like a designed product presentation, not a dashboard screenshot, and it
+must match what the real app produces.
+7.3 Section sequence
+Each section uses generous vertical spacing (about 120 px desktop) and one visual focal
+point. Avoid oversized feature-card grids; alternate text-left/visual-right layouts to create
+rhythm.
+#
+Section
+Intent
+1
+Hero
+State the promise and show the product
+2
+Supported integrations
+Build credibility with recognisable platforms
+3
+How PROFILEOS works
+Four-step Connect → Identity → Create → Publish
+story
+4
+Professional Identity Engine
+Explain the single source of truth
+5
+Portfolio Studio
+Show a real portfolio and its editing
+6
+CV and Resume Studio
+Show split-screen editing with live preview
+7
+Cover Letter Studio
+Show tone selection and editable output
+8
+Personal Branding
+Show the consistent identity across assets
+9
+Template gallery
+Let visitors browse real templates
+10
+Privacy and trust
+Explain data control and no unauthorised scraping
+11
+FAQ
+Remove last objections
+12
+Final CTA
+One clear action
+13
+Footer
+Links, legal, contact
+PROFILEOS — UI/UX Design Document
+Page 5 of 12
+
+
+=== PAGE 6 ===
+7.4 Motion
+Subtle fade-and-rise on scroll, slow parallax on hero graphics, hover lift on template cards.
+Durations 200–500 ms with ease-out. All motion respects prefers-reduced-motion .
+8. Authentication
+Four pages in the public visual language: Sign In, Create Account, Forgot Password, Email
+Verification.
+Centred card on an obsidian background with a restrained glow.
+Inline validation, visible password rules, show/hide password.
+Clear error messages that say what to do next.
+After success, route to onboarding (new users) or Overview (returning users). Never
+to a crowded dashboard.
+9. Onboarding
+Seven steps, all skippable where appropriate, with a persistent progress indicator and a
+"Skip for now" action.
+Design notes: one decision per screen; imported data is shown as a reviewable list with
+accept, edit and discard per item; the user can leave and resume later from the profile
+completion indicator.
+Step
+Content
+1
+Welcome to PROFILEOS
+2
+Choose professional category (Student, Developer,
+Designer, Business Professional, Freelancer,
+Entrepreneur, Researcher, Academic, Other)
+3
+Connect or add accounts (paste URLs; authorised
+connection where supported)
+4
+Upload documents
+5
+Review imported information
+6
+Complete the professional identity
+7
+Enter the workspace
+PROFILEOS — UI/UX Design Document
+Page 6 of 12
+
+
+=== PAGE 7 ===
+10. Workspace Shell
+Sidebar (slim, collapsible on desktop): Overview, My Profile, Portfolio Studio, CV
+Studio, Cover Letter Studio, My Documents, Settings. Icon plus label; icon-only when
+collapsed.
+Top bar: current page title, notifications (only if needed), profile menu.
+Mobile: bottom tab bar for the main destinations, with Settings in the profile menu;
+studios use full-screen flows.
+Layout: content max-width about 1200 px, generous padding, consistent page header
+with title and one primary action.
+The workspace uses a calm palette: charcoal surfaces, no particle or glow effects, accent
+colour only for primary actions and focus.
+11. Page Designs
+11.1 Overview
+Heading: "Welcome back. Let's build your professional identity."
+Supporting text: "Your professional information, portfolio, and career documents — all
+in one place."
+Four understated cards: Create Portfolio, Create CV, Create Cover Letter, Manage
+Profile. Each is fully clickable.
+A small profile completion indicator, with a link to the next missing section.
+Recent documents appear only when real data exists.
+No fake charts or analytics.
+11.2 My Profile
+The single source of truth for all generation.
+Sections: Basic Information, Social Profiles, Education, Qualifications, Work Experience,
+Internships, Projects, Skills, Certifications, Achievements, Awards, Publications,
+Volunteering, Languages, Interests, Professional Links.
+Pattern: a left section list (or tabs on mobile) and a right editor. Each section supports
+View, Add, Edit, Delete, Save and Cancel, with entries shown as compact cards that
+expand into an edit form. Users can add custom sections.
+Connect Your Professional World: a prominent panel for pasting URLs (LinkedIn, GitHub,
+personal site, Instagram, Facebook, Behance, other) with platform icons and URL
+validation. GitHub connects through its official API; LinkedIn only through officially
+PROFILEOS — UI/UX Design Document
+Page 7 of 12
+
+
+=== PAGE 8 ===
+permitted capabilities. Unsupported platforms save the link only and say so plainly, with
+no promise of data extraction and no scraping.
++ Add Information: a persistent button that opens a guided drawer to add a qualification,
+degree, certification, project, experience, skill, achievement or award.
+Imported data lands in a review state; nothing is merged until the user confirms it.
+11.3 Portfolio Studio
+Flow: Create Portfolio → choose type → choose template → select profile information →
+customise visuals → generate → preview → edit → save or publish.
+Types: One-Page (primary), Professional, Creative.
+Templates (genuinely different layouts, not recolours):
+Editor: a focused workspace with a section list (reorder, hide, add) on the left, a live
+preview in the centre with desktop/mobile toggle, and a style panel (colours, fonts, profile
+photo). Actions: Save draft, Publish, Unpublish.
+Rendering: portfolios are rendered from a structured specification and reusable
+components. No static screenshots and no execution of AI-generated JavaScript.
+11.4 CV Studio
+Flow: select CV type → choose template → select profile information → enter target role →
+optionally paste job description → generate → edit → preview → export PDF or DOCX →
+save to My Documents.
+Templates: ATS-Friendly, Minimal Professional, Modern, Academic, Executive, each with a
+distinct layout.
+Editor: a split screen.
+Template
+Character
+01 Minimal
+Light, spacious, clean typography, restrained
+structure
+02 Modern
+Dark, premium type, blue or violet accents
+03 Creative
+Expressive typography, distinctive section
+compositions
+PROFILEOS — UI/UX Design Document
+Page 8 of 12
+
+
+=== PAGE 9 ===
+On mobile the split view becomes two tabs, Edit and Preview, with a sticky export button.
+The CV is always structured, editable content, never an image.
+11.5 Cover Letter Studio
+Inputs: profile, company name, job title, job description, tone (for example formal, warm,
+confident, concise).
+Output: a full letter in a clean document editor with preview, export and saved versions.
+Guardrails: uses only verified profile data; does not invent company facts or
+achievements. Where company information is missing, the letter stays general or asks the
+user.
+11.6 My Documents
+Library of CVs, cover letters, portfolios, certificates, imported documents and generated
+assets.
+Search, filter by type, sort by date.
+Card or list view with preview.
+Actions: preview, download, rename, version history, delete (with confirmation).
+Meaningful empty states that point to the relevant Studio.
+11.7 Settings
+Account, Profile Preferences, Connected Accounts (disconnect and delete imported
+data), Privacy, Data Export, Account Deletion, Theme, Language, Notifications.
+Destructive actions sit in a clearly separated danger zone with explicit confirmation.
+12. Key User Flows
+New user to first CV
+Left: controls
+Right: live preview
+Editable content per section
+Paged CV, updates as you type
+Reorder and show/hide sections
+Page-break preview
+Typography, font size, margins, colours
+Template switching without losing content
+Add section
+Zoom and fit controls
+Version history
+Export PDF / DOCX
+PROFILEOS — UI/UX Design Document
+Page 9 of 12
+
+
+=== PAGE 10 ===
+1. Landing → Create Your Identity → create account → verify email.
+2. Onboarding: category → add GitHub link and upload an old CV.
+3. Review imported data → accept and edit → continue.
+4. Overview → Create CV → pick template → enter target role → generate.
+5. Edit in split view → export PDF → saved to My Documents.
+Profile to published portfolio
+1. My Profile → complete Projects and Skills.
+2. Portfolio Studio → One-Page → Modern template.
+3. Select content → customise → generate → edit and preview on mobile.
+4. Publish → copy public link; Unpublish remains available.
+Tailored application
+1. CV Studio → paste job description → generate tailored CV.
+2. Cover Letter Studio → same role and company → choose tone → generate and edit.
+3. Export both and find them under My Documents.
+13. AI Interaction Design
+Generation buttons call the real backend; no hardcoded outputs.
+A visible "Generating…" state with the option to cancel.
+Generated content is marked as a draft until the user edits or accepts it.
+Where information is missing, the interface asks a specific question ("What was your
+end date at this role?") instead of guessing.
+Every generated asset is saved and versioned, with restore.
+AI suggestions for summaries are shown as proposals the user can accept, edit or
+reject.
+14. Responsive Behaviour
+Breakpoint
+Behaviour
+Desktop (≥1280)
+Full sidebar, split-screen editors
+Laptop (1024–1279)
+Collapsible sidebar, narrower panels
+Tablet (768–1023)
+Collapsed sidebar, stacked panels where needed
+PROFILEOS — UI/UX Design Document
+Page 10 of 12
+
+
+=== PAGE 11 ===
+The mobile design is purpose-built, not a shrunken desktop. The public website must
+remain visually strong on mobile, with the hero visual recomposed for a vertical layout.
+15. Accessibility
+WCAG 2.2 AA contrast for all text and controls.
+Full keyboard navigation with visible focus rings in the accent blue.
+Semantic landmarks, labelled form fields, and error messages tied to inputs.
+Reduced-motion support; no information conveyed by colour alone.
+Touch targets at least 44 × 44 px.
+Exported PDFs from the ATS template must have selectable text and a logical reading
+order.
+16. States and Edge Cases
+Breakpoint
+Behaviour
+Mobile (<768)
+Bottom navigation, single-column pages, tabbed
+editor/preview
+State
+Treatment
+Empty
+Short explanation plus one clear action
+Loading
+Skeletons matching the final layout
+Error
+Plain-language message, retry, no raw errors
+Unsaved changes
+Warning before navigating away; autosave
+indicator
+Integration not configured
+Clear setup or unavailable state
+Offline or failed save
+Preserve local edits and retry
+Destructive actions
+Confirmation dialog naming what will be deleted
+PROFILEOS — UI/UX Design Document
+Page 11 of 12
+
+
+=== PAGE 12 ===
+17. Implementation Phasing
+Before building, inspect the existing codebase and preserve working functionality,
+architecture and integrations. Keep the public site, workspace, backend, AI workflows
+and portfolio renderer separate.
+18. Acceptance Checklist
+Premium, story-driven public homepage that is also strong on mobile.
+Clean authentication and a skippable onboarding flow.
+Slim workspace with exactly seven destinations, each its own page.
+Overview with four actions and a completion indicator, with no fake data.
+Profile editor with all sections, URL validation and reviewable imports.
+Three genuinely distinct portfolio templates rendering real pages.
+Five distinct CV templates with split-screen live editing and real PDF/DOCX export.
+Editable, versioned cover letters from verified data.
+Searchable document library and complete settings.
+No dead buttons, no fabricated AI content, no unauthorised scraping.
+Phase
+Deliverable
+1
+Public homepage redesign
+2
+Authentication and onboarding
+3
+Workspace shell and Overview
+4
+My Profile and manual information
+5
+Portfolio Studio and templates
+6
+CV Studio and editable generation
+7
+Cover Letter Studio
+8
+My Documents and Settings
+9
+AI integration, validation, testing, polish
+PROFILEOS — UI/UX Design Document
+Page 12 of 12
+
+

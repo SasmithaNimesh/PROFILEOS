@@ -1,0 +1,106 @@
+=== PAGE 1 ===
+PROFILEOS
+Features
+How it works
+Templates
+About
+Sign In
+Create Your Identity
+CONNECT · BUILD · CREATE · PUBLISH
+Everything you’ve 
+built. One powerful 
+professional 
+identity.
+Connect your professional world. Create your portfolio, CV, and 
+personal brand — all from one place.
+Create Your Identity
+Explore Features
+Your Name
+Portfolio · One-Page
+Your Name
+Target role
+Your Name
+Professional identity
+Images on page: 1
+
+
+=== PAGE 2 ===
+PROFILEOS
+Overview
+My Profile
+Portfolio Studio
+CV Studio
+Cover Letter Studio
+My Documents
+Settings
+Overview
+Welcome back. Let’s build your 
+professional identity.
+Your professional information, portfolio, and career documents — all in one place.
+Create Portfolio
+Publish a one-page site.
+Create CV
+Build and export an editable CV.
+Create Cover Letter
+Tailor a letter to a role.
+Manage Profile
+Keep your information current.
+Profile completion
+Next: add your education
+Images on page: 1
+
+
+=== PAGE 3 ===
+CV Studio / Untitled CV
+Export DOCX
+Export PDF
+Summary
+Experience
+Education
+Projects
+Skills
++ Add section
+Target role
+Professional summary
+Written from your verified profile. Edit any 
+line.
+Modern
+ATS-Friendly
+Academic
+Font · Size · Margins · Colour
+Your Name
+Target role
+SUMMARY
+EXPERIENCE
+Images on page: 1
+
+
+=== PAGE 4 ===
+Product flow
+01 CONNECT
+Bring it in
+Profile links 
+Document uploads 
+Manual entry 
+Review before saving
+→
+02 BUILD IDENTITY
+My Profile
+One verified source 
+Edit every section 
+Completion indicator
+→
+03 CREATE
+Three studios
+Portfolio Studio 
+CV Studio 
+Cover Letter Studio
+→
+04 PUBLISH
+Share and keep
+Publish portfolio 
+Export PDF or DOCX 
+My Documents
+Images on page: 1
+
+
